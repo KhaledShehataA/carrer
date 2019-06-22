@@ -1,0 +1,59 @@
+.navbar {
+    padding: 0;
+    background: $color-primary;
+
+    &-brand {
+        position: absolute;
+        top: 2rem;
+        left: 4rem;
+
+        img {
+            margin-top: 2rem;
+        }
+
+        .logo {
+            height: 5.5rem;
+        }
+    }
+
+    &-nav {
+
+
+        li {
+
+            &:hover a {
+                background: $color-black;
+                color: $color-white;
+                text-decoration: none;
+            }
+
+
+            &.current a {
+                background: $color-black;
+                color: $color-white;
+            }
+
+
+            a {
+                display: block;
+                padding: 3rem 4rem;
+                color: $color-white;
+                font-size: 1.5rem;
+                font-weight: 900;
+                text-align: center;
+
+                i {
+                    display: block;
+                    color: $color-white;
+                    font-weight: 500;
+                    line-height: 1.7;
+
+                    &::before {
+                        margin-left: 0;
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

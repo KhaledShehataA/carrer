@@ -1,0 +1,140 @@
+.contact-form {
+    margin: 0;
+
+    h3 {
+        font-size: 24px;
+        color: $color-white-tertiary;
+        font-weight: 900;
+        padding-left: 3.5rem;
+        position: relative;
+        margin-bottom: 2.5rem;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 1.8rem;
+            height: 1.8rem;
+            border: 3px solid $color-primary;
+            left: 0;
+            top: 2px;
+        }
+    }
+
+    form {
+        font-weight: 400;
+
+        .input-part {
+
+            input {
+                width: 100%;
+                height: 4rem;
+                margin-bottom: 1.5rem;
+                padding: 5px 2rem;
+                font-size: 1.6rem;
+                color: #585858;
+                outline: 1px solid transparent;
+                border: 1px solid $color-form-primary;
+                background: $bg-form-primary;
+
+                &:focus {
+                    border: 1px solid $color-primary;
+                }
+            }
+        }
+
+        .checkbox-part {
+            margin: 2rem 0;
+
+            &-group {
+                display: inline-block;
+                width: 32%;
+                margin-bottom: 1rem;
+
+                label {
+                    font-size: 1.5rem;
+                    color: $color-white;
+                    font-weight: 400;
+                    display: inline-block;
+                }
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+
+                input[type="checkbox"]+label:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+
+                input[type="checkbox"]+label {
+                    display: block;
+                    position: relative;
+                    padding-left: 3rem;
+                    font: 1.5rem;
+                    color: $color-white;
+                    cursor: pointer;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        border: 2px solid $color-form-primary;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        opacity: 1;
+                    }
+                }
+
+                input[type="checkbox"]:checked+label:before {
+                    width: 1rem;
+                    top: -5px;
+                    left: 5px;
+                    border-radius: 0;
+                    opacity: 1;
+                }
+
+
+
+            }
+        }
+
+        .messages-part {
+            textarea {
+                width: 100%;
+                height: 17rem;
+                resize: none;
+                margin-bottom: 1.5rem;
+                padding: 2rem;
+                font-size: 1.6rem;
+                color: $color-form-secondary;
+                border: 1px solid $color-form-primary;
+                background: $bg-form-primary;
+
+                &:focus {
+                    border: 1px solid $color-primary;
+                }
+            }
+        }
+
+        .submit-btn {
+            margin-top: 1rem;
+
+            .btn {
+                color: $color-white;
+                background: $color-primary;
+                padding: 8px 3rem;
+                border-radius: 3rem;
+                font-size: 1.6rem;
+                font-weight: 400;
+                position: relative;
+                background: $color-secondary;
+
+                &:hover {
+                    color: $color-white;
+                    background: $color-tertiary;
+                }
+            }
+        }
+    }
+}
